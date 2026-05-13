@@ -3,58 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Homepage</title>
+  <title>My Website</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f4f4f4;
+      margin: 0;
+      background-color: #f9f9f9;
       color: #333;
     }
     header {
+      background: #007acc;
+      color: white;
+      padding: 15px;
       text-align: center;
-      margin-bottom: 20px;
+    }
+    nav {
+      margin-top: 10px;
     }
     nav a {
-      margin: 0 10px;
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
-      color: #007acc;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .blog-post {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .blog-post h3 {
+      margin-top: 0;
     }
     footer {
+      background: #007acc;
+      color: white;
       text-align: center;
+      padding: 15px;
       margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Website</h1>
+    <h1>Welcome to Our Website</h1>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#products">Products</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact Us</a>
     </nav>
   </header>
 
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Home</h2>
+    <p>This is our homepage where we share our mission and vision.</p>
+  </section>
+
+  <!-- About Us Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>This is a short introduction about myself.</p>
+    <h2>About Us</h2>
+    <p>We are a company dedicated to delivering quality products and services to our customers.</p>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Here are some of the things I’ve worked on.</p>
+  <!-- Products Section -->
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Product Type 1</h3>
+        <p>Short description of product type 1.</p>
+      </div>
+      <div class="card">
+        <h3>Product Type 2</h3>
+        <p>Short description of product type 2.</p>
+      </div>
+      <div class="card">
+        <h3>Product Type 3</h3>
+        <p>Short description of product type 3.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Blog Section -->
+  <section id="blog">
+    <h2>Our Blog</h2>
+    <div class="blog-post">
+      <h3>Blog Post Title 1</h3>
+      <p>Excerpt or summary of the first blog post. <a href="#">Read more...</a></p>
+    </div>
+    <div class="blog-post">
+      <h3>Blog Post Title 2</h3>
+      <p>Excerpt or summary of the second blog post. <a href="#">Read more...</a></p>
+    </div>
+    <div class="blog-post">
+      <h3>Blog Post Title 3</h3>
+      <p>Excerpt or summary of the third blog post. <a href="#">Read more...</a></p>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
   <section id="contact">
-    <h2>Contact</h2>
-    <p>You can reach me at: <a href="mailto:example@email.com">example@email.com</a></p>
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+    <p>Phone: +91-1234567890</p>
+    <p>Address: 123 Business Street, City, Country</p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 My Website</p>
+    <p>&copy; 2026 My Website. All rights reserved.</p>
   </footer>
 </body>
 </html>
