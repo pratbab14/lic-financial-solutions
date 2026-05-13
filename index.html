@@ -1,0 +1,82 @@
+export default function LICAdvisorWebsite() {
+              {
+                category: "Micro Insurance Plans",
+                products: [
+                  "LIC's Micro Bachat",
+                  "LIC's Jan Suraksha",
+                ],
+              },
+              {
+                category: "Withdrawn Plans",
+                products: [
+                  "LIC's Nav Jeevan Shree - Single Premium",
+                ],
+              },
+              {
+                category: "Protect My Family",
+                products: [
+                  "LIC's Digi Term",
+                  "LIC's Digi Credit Life",
+                  "LIC's Yuva Credit Life",
+                  "LIC's Yuva Term",
+                  "LIC's New Tech-Term",
+                  "LIC's New Jeevan Amar",
+                  "LIC's Saral Jeevan Bima",
+                  "LIC's Bima Kavach",
+                ],
+              },
+              {
+                category: "Create Wealth",
+                products: [
+                  "LIC's Index Plus",
+                  "LIC's Nivesh Plus",
+                  "LIC's SIIP",
+                  "LIC's New Pension Plus",
+                ],
+              },
+              {
+                category: "Plans for Children's Future",
+                products: [
+                  "LIC's New Children's Money Back Plan",
+                  "LIC's Jeevan Tarun",
+                  "LIC's Amritbaal",
+                ],
+              },
+            ].map((section, index) => (
+              <div
+                key={index}
+                className="bg-blue-50 border border-blue-100 rounded-3xl p-8 shadow-md"
+              >
+                <h3 className="text-3xl font-bold text-blue-900 mb-6">
+                  {section.category}
+                </h3>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {section.products.map((product, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white rounded-2xl p-4 shadow hover:shadow-lg transition"
+                    >
+                      <p className="font-medium text-gray-700">{product}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}}
+      <footer className="bg-gray-950 text-gray-400 py-8 px-6 text-center">
+        <p>
+          © 2026 Pratyush Jairam Sharma | LIC Insurance & Financial Advisor
+        </p>
+
+        <p className="mt-2 text-sm">
+          Helping families achieve financial security through trusted LIC plans.
+        </p>
+      </footer>
+    </div>
+  );
+}
