@@ -306,18 +306,20 @@ nav a:hover {
       <div class="card">
         <!-- Product 1 -->
   <div class="product">
-    <h3>Product Type 1</h3>
-    <p>Short description of product type 1.</p>
+  <h3>Product Type 1</h3>
+  <p>Short description of product type 1.</p>
+  
+  <!-- PDF link instead of image -->
+  <a href="Plans/product1.pdf" target="_blank" class="pdf-link">📄 View Product 1 Plan</a>
 
-    <!-- Place the form here -->
-    <form onsubmit="forwardDetails(event, 'plans/product1.pdf')">
-      <input type="text" name="contact" placeholder="Contact No" required>
-      <input type="email" name="email" placeholder="Email ID" required>
-      <input type="text" name="location" placeholder="Location" required>
-      <button type="submit">Send & Download</button>
-    </form>
-  </div>
-
+  <!-- Form -->
+  <form onsubmit="return validateForm(this, 'plans/product1.pdf')">
+    <input type="text" name="contact" placeholder="Contact No" required>
+    <input type="email" name="email" placeholder="Email ID" required>
+    <input type="text" name="location" placeholder="Location" required>
+    <button type="submit">Send & Download</button>
+  </form>
+</div>
   <!-- Product 2 -->
   <div class="product">
     <h3>Product Type 2</h3>
