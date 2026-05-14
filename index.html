@@ -1,516 +1,852 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Comprehensive Insurance Services</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-   header {
-  background: #007acc;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EliteCover Consultants</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.logo-card img {
-  height: 70px;
-  width: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+body{
+  font-family:Arial, sans-serif;
+  background:#f4f7fb;
+  color:#333;
+  line-height:1.6;
 }
 
-header h1 {
-  margin: 0 20px;
-  font-size: 22px;
-  font-weight: bold;
+/* HEADER */
+
+header{
+  background:#007acc;
+  color:#fff;
+  padding:15px 30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  position:sticky;
+  top:0;
+  z-index:999;
 }
 
-nav {
-  display: flex;
-  gap: 20px;
+.logo-card img{
+  height:70px;
+  border-radius:8px;
+  background:#fff;
+  padding:5px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
+header h1{
+  font-size:28px;
+  margin-left:15px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.header-left{
+  display:flex;
+  align-items:center;
 }
 
-/* Hamburger icon */
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
+nav{
+  display:flex;
+  gap:20px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  nav {
-    display: none; /* hide menu by default */
-    flex-direction: column;
-    width: 100%;
-    background: #005f99;
-    padding: 10px;
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#d9efff;
+}
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h2{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:800px;
+  margin:auto;
+  font-size:18px;
+}
+
+.hero .btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 25px;
+  background:#007acc;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+.hero .btn:hover{
+  background:#005f99;
+}
+
+/* SECTION */
+
+section{
+  padding:70px 20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:36px;
+  color:#007acc;
+}
+
+/* CARDS */
+
+.card-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+}
+
+.card{
+  background:#fff;
+  width:340px;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:#007acc;
+}
+
+/* PRODUCTS */
+
+.product-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.product{
+  background:#fff;
+  width:330px;
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.product h3{
+  color:#007acc;
+  margin-bottom:15px;
+}
+
+.product form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:20px;
+}
+
+.product input{
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.send-btn,
+.download-btn{
+  padding:12px;
+  border:none;
+  border-radius:6px;
+  background:#007acc;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.send-btn:hover,
+.download-btn:hover{
+  background:#005f99;
+}
+
+/* BLOG */
+
+.blog-post{
+  background:#fff;
+  padding:25px;
+  margin-bottom:25px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* PARTNERS */
+
+.logo-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+
+.logo-grid img{
+  width:180px;
+  background:#fff;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* TEAM */
+
+.team-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+}
+
+.team-card{
+  background:#fff;
+  width:500px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.team-card img{
+  width:120px;
+  height:120px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+.team-info h3{
+  margin-bottom:8px;
+}
+
+.team-info .position{
+  color:#007acc;
+  font-weight:bold;
+}
+
+/* CONTACT */
+
+.contact-box{
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+  background:#007acc;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  nav{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#005f99;
+    margin-top:15px;
+    padding:15px;
   }
-  nav a {
-    margin: 10px 0;
+
+  nav.active{
+    display:flex;
   }
-  .menu-toggle {
-    display: block; /* show hamburger */
+
+  .menu-toggle{
+    display:block;
   }
-  nav.active {
-    display: flex; /* show menu when toggled */
+
+  .hero h2{
+    font-size:34px;
   }
+
+  .card,
+  .product,
+  .team-card{
+    width:100%;
+  }
+
 }
 
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px;
-    }
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      width: 250px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .card h3 {
-      margin-top: 0;
-    }
-  .product-container {
-  display: flex;
-  flex-direction: row;   /* Arrange cards left to right */
-  flex-wrap: wrap;       /* Allow wrapping on smaller screens */
-  gap: 20px;             /* Space between cards */
-  justify-content: center; /* Center them horizontally */
-}
-    .blog-post {
-  width: 900px;         
- margin: 0 auto 20px;  /* center align and add spacing */
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-    .blog-post h3 {
-      margin-top: 0;
-    }
-    .logo-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 20px;
-    }
-    .logo-grid img {
-      width: 150px;
-      height: auto;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 10px;
-      background: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .nav-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #007acc;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .nav-button:hover {
-      background: #005f99;
-    }
-    footer {
-      background: #007acc;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-  #team {
-  padding: 40px;
-}
-
-.team-container {
-  display: flex;
-  flex-direction: column; /* stack cards vertically */
-  gap: 25px; /* space between cards */
-}
-
-.team-card {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap; /* prevents overlap on smaller screens */
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 700px; /* keeps cards from stretching too wide */
-}
-
-.team-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-right: 20px;
-  flex-shrink: 0; /* prevents image from shrinking */
-}
-
-.team-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1; /* allows text to fill remaining space */
-  min-width: 200px;
-}
-
-.team-info h3 {
-  margin: 0 0 8px;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.team-info .position {
-  margin-bottom: 8px;
-  color: #333;
-  font-size: 15px;
-}
-
-.team-info .contact {
-  color: #007acc;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-
-  </style>
+</style>
 </head>
+
 <body>
-  <header>
-  <div class="logo-card">
-    <img src="Elite Cover Logo.png" alt="Elite Cover Consultants Logo">
-  </div>
-  <h1>Elite Cover Consultants</h1>
-  
-  <!-- Hamburger icon -->
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  
-  <nav id="nav-menu">
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#services">Services</a>
-    <a href="#products">Products</a>
-    <a href="#blog">Blog</a>
-    <a href="#partners">Partners</a>
-    <a href="#team">Team</a>
-    <a href="#contact">Contact Us</a>
-  </nav>
+
+<header>
+
+<div class="header-left">
+<div class="logo-card">
+<img src="Elite Cover Logo.png" alt="Logo">
+</div>
+
+<h1>EliteCover Consultants</h1>
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="nav-menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#products">Products</a>
+<a href="#blog">Blog</a>
+<a href="#partners">Partners</a>
+<a href="#team">Team</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
-  <!-- Home Section -->
-  <section id="home">
-    <h2>Home</h2>
-    <p><strong> Our Vission </strong> </p>
-    <p> At EliteCover Consultants, our vision is to become a trusted leader in financial protection and wealth management by empowering individuals 
-        and businesses with secure, innovative, and reliable financial solutions.
-        We aim to build a future where every client enjoys financial confidence, protection, and long-term prosperity through expert guidance in insurance, 
-        investments, savings, and financial planning. Our goal is to create lasting relationships based on trust, integrity, transparency, and excellence while 
-        helping our clients achieve financial freedom and peace of mind.</p>
-    <p><strong> Our Mission </strong> </p>
-    <p> “To protect lives, secure futures, and create financial growth for generations.” </p>
-    
-    <a href="#contact" class="nav-button">Go to Contact Us</a>
-  </section>
+<!-- HERO -->
 
-  <!-- About Us Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p> <strong> Your Partner in Protection,Planning & Peace Of Mind </strong></p>
-    <p><strong> Reliable Life Insurance Advisor</strong></p> 
-    <p> A trusted life insurance advisor partners with LIC to offer guidance that is honest, simple, and customizable based on individual financial 
-        plans. Whether someone is looking to secure their family’s financial future, planning for retirement, or protecting hard‑earned savings, this
-        advisor helps choose the right path with clarity and confidence.</p>
-  </section>
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="card-container">
-      <div class="card">
-          <h3><strong> High-impact services to help our clients  </strong></h3>
-        <p> A reliable insurance advisor excels at understanding clients’ needs and suggesting plans that truly protect families. With deep knowledge 
-            of policy options and risk management, the advisor guides people through complex decisions with clear, honest advice. The goal is to make 
-            the process simple, build trust, and ensure clients feel confident that their loved ones and savings are secure for the future.</p>
-              </div>
-        <div class="card">
-        <h3> <strong> Client Consultation </strong></h3>
-        <p> Understanding a client’s life situation is the first and most important step in choosing the right insurance. A trusted advisor listens carefully
-            whether it’s about children’s education, retirement planning, or financial concerns — and then suggests options that truly fit those needs.
-            From a general life insurance perspective, policies are designed not only to protect families in times of uncertainty but also to promote 
-            disciplined savings, provide tax benefits, and support long‑term financial goals. By combining professional guidance with the inherent strengths 
-            of life insurance, individuals can feel confident that their loved ones and their future are secure.</p>
-      </div>
-      <div class="card">
-        <h3><strong>Policy Recommendations </strong></h3>
-        <p>A trusted insurance advisor carefully reviews different LIC plans and selects those that align with each client’s goals.
-           They explain policies clearly — what the plan covers, the costs involved, and the benefits provided — ensuring clients 
-           understand the real value rather than simply chasing the cheapest option.
+<section class="hero" id="home">
 
-          From a general insurance perspective, this approach applies across health, motor, and property insurance as well. Every individual
-          or family has unique needs, and a skilled advisor helps match those needs with the right coverage. By combining expertise with honest guidance, 
-          the advisor ensures that clients receive protection, savings opportunities, and peace of mind across all aspects of their financial and personal security.</p>
-      </div>
-      <div class="card">
-        <h3>Savings & Investment</h3>
-        <p>Insurance-backed savings and investment options for long-term goals.</p>
-      </div>
-      <div class="card">
-        <h3>Tax Planning</h3>
-        <p>Guidance on maximizing tax benefits through insurance premiums.</p>
-      </div>
-    </div>
-  </section>
+<h2>Protecting Today, Securing Tomorrow</h2>
 
-  <!-- Products Section -->
-  <section id="products">
-    <h2> Products</h2>
-    <div class="card-container">
-      <div class="product-container">
- 
-</div>
-      <div class="card">
- <!-- Product 1 -->
-  <div class="product">
-    <h3>Product Type 1</h3>
-    <p>Short description of product type 1.</p>
+<p>
+Trusted experts in Life Insurance, General Insurance,
+Finance, Savings, Investments and Loans.
+</p>
 
-    <form onsubmit="return sendDetails(this, 'download1')">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="text" name="contact" placeholder="Contact No" required>
-      <input type="email" name="email" placeholder="Email ID" required>
-      <input type="text" name="location" placeholder="Location" required>
-      <button type="submit" class="send-btn">Send</button>
-    </form>
+<a href="#contact" class="btn">Contact Us</a>
 
-    <button id="download1" class="download-btn" style="display:none;" 
-            onclick="downloadPDF('Plans/product1.pdf')">📄 Download Plan</button>
-  </div>
-
-  <!-- Product 2 -->
-  <div class="product">
-    <h3>Product Type 2</h3>
-    <p>Short description of product type 2.</p>
-
-    <form onsubmit="return sendDetails(this, 'download2')">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="text" name="contact" placeholder="Contact No" required>
-      <input type="email" name="email" placeholder="Email ID" required>
-      <input type="text" name="location" placeholder="Location" required>
-      <button type="submit" class="send-btn">Send</button>
-    </form>
-
-    <button id="download2" class="download-btn" style="display:none;" 
-            onclick="downloadPDF('plans/product2.pdf')">📄 Download Plan</button>
-  </div>
-
-  <!-- Product 3 -->
-  <div class="product">
-    <h3>Product Type 3</h3>
-    <p>Short description of product type 3.</p>
-
-    <form onsubmit="return sendDetails(this, 'download3')">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="text" name="contact" placeholder="Contact No" required>
-      <input type="email" name="email" placeholder="Email ID" required>
-      <input type="text" name="location" placeholder="Location" required>
-      <button type="submit" class="send-btn">Send</button>
-    </form>
-
-    <button id="download3" class="download-btn" style="display:none;" 
-            onclick="downloadPDF('plans/product3.pdf')">📄 Download Plan</button>
-  </div>
-  
-  </div>
-  </section>
-
-  <!-- Blog Section -->
-  <section id="blog">
-    <h2>Our Blog</h2>
-    <div class="blog-post">
-      <h3> <strong>Life Insurance</strong></h3>
-      <p>The Importance of Life Insurance <a href="#">Read more...</a> </p>
-      <p> Life is full of uncertainties, and while none of us can predict tomorrow, 
-          We can take steps today to protect the people we love. Life insurance is one of the most effective ways to ensure your family’s  financial
-          security in your absence. It provides a safety net that covers daily expenses, loan repayments, children’s education, and future responsibilities, 
-          allowing your loved ones to live with dignity even during difficult times.
-          Beyond protection, modern life insurance plans also offer savings, periodic returns, and investment options, making them a valuable
-          tool for long‑term financial planning. With tax benefits on premiums and the potential to grow in value, life insurance is more than 
-          just a safety net — it’s a symbol of love, responsibility, and foresight, ensuring your family never faces life’s challenges alone.</p>
-      
-    </div>
-    <div class="blog-post">
-      <h3> <strong>Starting young</strong></h3>
-      <p> Why Starting Young is Important for Life Insurance <a href="#">Read more...</a> </p>
-      <p>Most people think life insurance is for later in life, but the best time to buy is when you’re young. Starting early means lower premiums, 
-         wider plan options, and longer coverage — helping you save for big goals while protecting your future family.
-         Buying young isn’t just smart financially; it’s a sign of maturity and foresight, ensuring peace of mind for decades to come.</p>
-      
-    </div>
-    <div class="blog-post">
-      <h3><strong>Financial tool</strong></h3>
-      <p>Insurance is Another Financial Tool,Not Just a Backup <a href="#">Read more...</a></p>
-      <p>Life insurance is not just a backup plan — it’s a powerful financial tool that belongs at the center of smart financial planning. 
-        Beyond protecting loved ones in times of uncertainty, it helps build wealth, save for future goals, and enjoy tax advantages. With 
-        options like endowment and money‑back policies, you get guaranteed returns along with life cover. Market‑linked plans allow you to
-        tap into equity growth while staying protected, while regular premiums encourage disciplined savings that support long‑term aspirations.
-
-        Whether you’re buying a home, funding your child’s education, or preparing for retirement, insurance‑backed savings provide stability and assurance. 
-        Unlike volatile investments, insurance offers consistency and predictable returns, while also delivering tax benefits under the Income Tax Act. 
-        By integrating life insurance into your financial plan today, you secure growth, protection, and peace of mind — ensuring your family’s future 
-        is safeguarded no matter what life brings. </p>
-    </div>
-  </section>
-  
-  </div>
-    <div class="blog-post">
-      <h3><strong> Why you need insurance</strong> </h3>
-      <p> Advantages of Insurance and Why You Need Insurance Agents <a href="#">Read more...</a></p>
-      <p>Life insurance offers clear advantages—financial security, savings, tax benefits, and future planning. Yet choosing the right policy can be complex, 
-         which is why a trusted agent is invaluable. Insurance isn’t one‑size‑fits‑all; age, income, goals, and family responsibilities shape the right plan. 
-         A skilled agent helps assess needs, recommend options, and provide ongoing support with premiums, claims, and coverage reviews. Unlike digital platforms,
-         agents build long‑term relationships rooted in trust.
-         In a world driven by technology, human guidance matters—simplifying insurance, offering honest advice, and ensuring families remain genuinely protected. </p>
-    </div>
-  </section>
-
-  <!-- Partners Section -->
-  <section id="partners">
-    <h2>Our Partners</h2>
-    <p>We proudly collaborate with the following organizations:</p>
-    <div class="logo-grid">
-      <img src="LIC-Logo.png" alt="Partner 1 Logo">
-      <img src="Go_Digit_Life_712623d41b.png" alt="Partner 2 Logo">
-      <img src="GoDigit-General-Insurance-Company-730x410.jpg" alt="Partner 3 Logo">
-      <img src="partner4.png" alt="Partner 4 Logo">
-    </div>
-  </section>
-  <section id="team">
-  <h2>Meet Our Team</h2>
-  <div class="team-container">
-    
-    <div class="team-card">
-      <img src="Pratyush Sharma.png" alt="Pratyush Sharma">
-      <div class="team-info">
-        <h3>Pratyush Sharma</h3>
-        <p class="position">Senior Insurance Advisor</p>
-        <p class="contact">📞 +91-8487090212</p>
-      </div> <!-- ✅ properly closed -->
-    </div>
-
-    <div class="team-card">
-      <img src="team2.jpg" alt="Advisor 2">
-      <div class="team-info">
-        <h3>Anita Patel</h3>
-        <p class="position">Financial Planning Specialist</p>
-      </div>
-    </div>
-
-    <div class="team-card">
-      <img src="team3.jpg" alt="Advisor 3">
-      <div class="team-info">
-        <h3>Vikram Singh</h3>
-        <p class="position">Claims & Policy Support</p>
-      </div>
-    </div>
-
-    <div class="team-card">
-      <img src="team4.jpg" alt="Advisor 4">
-      <div class="team-info">
-        <h3>Neha Desai</h3>
-        <p class="position">Customer Relationship Manager</p>
-      </div>
-    </div>
-
-  </div>
 </section>
 
-    <!-- Contact Us Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@example.com">pratyushauto@gmail.com</a></p>
-    <p>Phone: +91-8487090212</p>
-    <p>Address: 33/1 jainnagar Bungalows part-2 Ghuma, 
-                Ahmedabad- Gujarat- 380058 </p>
-    <a href="#home" class="nav-button">Back to Home</a>
-  </section>
+<!-- ABOUT -->
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 My Website. All rights reserved.</p>
-  </footer>
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About Us</h2>
+</div>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Our Vision</h3>
+<p>
+To become a trusted leader in financial protection and wealth management.
+</p>
+</div>
+
+<div class="card">
+<h3>Our Mission</h3>
+<p>
+To protect lives, secure futures, and create financial growth for generations.
+</p>
+</div>
+
+<div class="card">
+<h3>Why Choose Us</h3>
+<p>
+Professional guidance, personalized financial solutions, and trusted support.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Services</h2>
+</div>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Life Insurance</h3>
+<p>Secure your family’s future with trusted insurance plans.</p>
+</div>
+
+<div class="card">
+<h3>General Insurance</h3>
+<p>Protect health, vehicle, business, and property.</p>
+</div>
+
+<div class="card">
+<h3>Investment Planning</h3>
+<p>Grow wealth through disciplined investment strategies.</p>
+</div>
+
+<div class="card">
+<h3>Savings Solutions</h3>
+<p>Smart savings plans for long-term financial goals.</p>
+</div>
+
+<div class="card">
+<h3>Loans Assistance</h3>
+<p>Get support for personal and business financing.</p>
+</div>
+
+<div class="card">
+<h3>Tax Planning</h3>
+<p>Maximize benefits and optimize tax savings.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Products</h2>
+</div>
+
+<div class="product-container">
+<!-- PRODUCTS -->
+
+<section id="products">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Life Insurance Plans</h2>
+</div>
+
+<div class="product-container">
+
+<!-- TERM PLAN -->
+
+<div class="product">
+
+<h3>Term Insurance Plan</h3>
+
+<p>
+Affordable protection plan providing high life coverage and financial security for your family.
+</p>
+
+<form onsubmit="return sendDetails(this,'download-term')">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="text" name="contact" placeholder="Contact Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<button type="submit" class="send-btn">Send</button>
+
+</form>
+
+<button id="download-term" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/term-insurance.pdf')">
+
+📄 Download Plan
+
+</button>
+
+</div>
+
+<!-- ENDOWMENT PLAN -->
+
+<div class="product">
+
+<h3>Endowment Plan</h3>
+
+<p>
+Combination of savings and insurance offering guaranteed returns with life protection.
+</p>
+
+<form onsubmit="return sendDetails(this,'download-endowment')">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="text" name="contact" placeholder="Contact Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<button type="submit" class="send-btn">Send</button>
+
+</form>
+
+<button id="download-endowment" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/endowment-plan.pdf')">
+
+📄 Download Plan
+
+</button>
+
+</div>
+
+<!-- MONEY BACK PLAN -->
+
+<div class="product">
+
+<h3>Money Back Plan</h3>
+
+<p>
+Get periodic returns during the policy term along with insurance protection benefits.
+</p>
+
+<form onsubmit="return sendDetails(this,'download-moneyback')">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="text" name="contact" placeholder="Contact Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<button type="submit" class="send-btn">Send</button>
+
+</form>
+
+<button id="download-moneyback" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/money-back.pdf')">
+
+📄 Download Plan
+
+</button>
+
+</div>
+
+<!-- CHILD PLAN -->
+
+<div class="product">
+
+<h3>Child Education Plan</h3>
+
+<p>
+Secure your child’s future education and important milestones with long-term savings.
+</p>
+
+<form onsubmit="return sendDetails(this,'download-child')">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="text" name="contact" placeholder="Contact Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<button type="submit" class="send-btn">Send</button>
+
+</form>
+
+<button id="download-child" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/child-plan.pdf')">
+
+📄 Download Plan
+
+</button>
+
+</div>
+
+<!-- RETIREMENT PLAN -->
+
+<div class="product">
+
+<h3>Retirement / Pension Plan</h3>
+
+<p>
+Build a financially independent retirement with guaranteed pension and savings benefits.
+</p>
+
+<form onsubmit="return sendDetails(this,'download-retirement')">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="text" name="contact" placeholder="Contact Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<button type="submit" class="send-btn">Send</button>
+
+</form>
+
+<button id="download-retirement" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/retirement-plan.pdf')">
+
+📄 Download Plan
+
+</button>
+
+</div>
+
+<!-- ULIP PLAN -->
+
+<div class="product">
+
+<h3>ULIP Plan</h3>
+
+<p>
+Market-linked investment plan with life insurance benefits and wealth creation opportunities.
+</p>
+
+<form onsubmit="return sendDetails(this,'download-ulip')">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="text" name="contact" placeholder="Contact Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<button type="submit" class="send-btn">Send</button>
+
+</form>
+
+<button id="download-ulip" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/ulip-plan.pdf')">
+
+📄 Download Plan
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- BLOG -->
+
+<section id="blog">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Latest Blogs</h2>
+</div>
+
+<div class="blog-post">
+<h3>The Importance of Life Insurance</h3>
+<p>
+Life insurance provides financial protection and peace of mind for families.
+</p>
+</div>
+
+<div class="blog-post">
+<h3>Why Start Investing Early</h3>
+<p>
+Early investing creates long-term financial security and wealth growth.
+</p>
+</div>
+
+<div class="blog-post">
+<h3>Insurance as a Financial Tool</h3>
+<p>
+Insurance helps build savings while protecting future goals.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PARTNERS -->
+
+<section id="partners">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Partners</h2>
+</div>
+
+<div class="logo-grid">
+
+<img src="LIC-Logo.png" alt="LIC">
+
+<img src="Go_Digit_Life_712623d41b.png" alt="Digit Life">
+
+<img src="GoDigit-General-Insurance-Company-730x410.jpg" alt="Digit General">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TEAM -->
+
+<section id="team">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Meet Our Team</h2>
+</div>
+
+<div class="team-container">
+
+<div class="team-card">
+
+<img src="Pratyush Sharma.png" alt="Pratyush Sharma">
+
+<div class="team-info">
+<h3>Pratyush Sharma</h3>
+<p class="position">Senior Insurance Advisor</p>
+<p>📞 +91-8487090212</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+</div>
+
+<div class="contact-box">
+
+<p><strong>Email:</strong> pratyushauto@gmail.com</p>
+
+<p><strong>Phone:</strong> +91-8487090212</p>
+
+<p>
+<strong>Address:</strong><br>
+33/1 Jainnagar Bungalows Part-2,<br>
+Ghuma, Ahmedabad, Gujarat - 380058
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 EliteCover Consultants. All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- SCRIPTS -->
+
 <script>
-function toggleMenu() {
+
+function toggleMenu(){
   document.getElementById("nav-menu").classList.toggle("active");
 }
-</script>
+
+function sendDetails(form, downloadBtnId){
+
+  const contact = form.contact.value;
+  const email = form.email.value;
+  const location = form.location.value;
+
+  const message =
+`New Plan Request:
+Contact: ${contact}
+Email: ${email}
+Location: ${location}`;
+
+  const whatsappUrl =
+`https://wa.me/918487090212?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappUrl, '_blank');
+
+  document.getElementById(downloadBtnId).style.display='block';
+
+  return false;
 }
-  <script>
-    function sendDetails(form, downloadBtnId) {
-      if (form.checkValidity()) {
-        const contact = form.contact.value;
-        const email = form.email.value;
-        const location = form.location.value;
 
-        // Build WhatsApp message
-        const message = `New PDF Request:\nContact: ${contact}\nEmail: ${email}\nLocation: ${location}`;
-        const whatsappUrl = `https://wa.me/918487090212?text=${encodeURIComponent(message)}`;
+function downloadPDF(pdfUrl){
+  window.open(pdfUrl,'_blank');
+}
 
-        // Open WhatsApp with pre-filled message
-        window.open(whatsappUrl, '_blank');
+</script>
 
-        // Reveal the download button
-        document.getElementById(downloadBtnId).style.display = 'inline-block';
-        return false; // prevent actual form submission
-      }
-      return false;
-    }
-
-    function downloadPDF(pdfUrl) {
-      window.open(pdfUrl, '_blank');
-    }
-  </script>
+</body>
+</html>
