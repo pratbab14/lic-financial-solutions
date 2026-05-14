@@ -467,31 +467,25 @@ nav a:hover {
 function toggleMenu() {
   document.getElementById("nav-menu").classList.toggle("active");
 }
+<script>
+function validateForm(form, pdfUrl) {
+  if (form.checkValidity()) {
+    // Forward details to WhatsApp
+    const contact = form.contact.value;
+    const email = form.email.value;
+    const location = form.location.value;
+
+    const message = `New PDF Request:%0AContact: ${contact}%0AEmail: ${email}%0ALocation: ${location}`;
+    const whatsappUrl = `https://wa.me/918487090212?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+
+    // Open the PDF file
+    window.open(pdfUrl, '_blank');
+    return false; // prevent actual form submission
+  }
+  return false;
+}
 </script>
-<!-- Your product sections and forms here -->
-
-  <!-- Script at the end of body -->
-  <script>
-    function forwardDetails(e, pdfUrl) {
-      e.preventDefault();
-
-      const form = e.target;
-      const contact = form.contact.value;
-      const email = form.email.value;
-      const location = form.location.value;
-
-      const message = `New PDF Request:%0AContact: ${contact}%0AEmail: ${email}%0ALocation: ${location}`;
-      const whatsappUrl = `https://wa.me/918487090212?text=${message}`;
-      window.open(whatsappUrl, '_blank');
-
-      const mailSubject = "New PDF Request";
-      const mailBody = `Contact: ${contact}\nEmail: ${email}\nLocation: ${location}`;
-      const mailUrl = `mailto:pratyushauto@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
-      window.open(mailUrl, '_blank');
-
-      window.open(pdfUrl, '_blank');
-    }
-  </script>  
 
 </body>
 </html>
