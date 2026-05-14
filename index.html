@@ -104,12 +104,23 @@ nav a:hover {
     .card h3 {
       margin-top: 0;
     }
-  .product-container {
-  display: flex;
-  flex-direction: row;   /* Arrange cards left to right */
-  flex-wrap: wrap;       /* Allow wrapping on smaller screens */
-  gap: 20px;             /* Space between cards */
-  justify-content: center; /* Center them horizontally */
+  /* Container to hold all product cards */
+    .product-container {
+      display: flex;              /* Align cards side by side */
+      flex-wrap: wrap;            /* Allow wrapping on smaller screens */
+      gap: 20px;                  /* Space between cards */
+      justify-content: center;    /* Center align cards horizontally */
+    }
+
+    /* Each product card */
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background-color: #fff;
+      width: 300px;               /* Fixed card width */
+    }
 }
     .blog-post {
   width: 900px;         
