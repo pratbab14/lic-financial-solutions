@@ -304,35 +304,46 @@ nav a:hover {
     <h2> Products</h2>
     <div class="card-container">
       <div class="card">
-        <h3>Product Type 1</h3>
-        <p>Short description of product type 1.</p>
+        <!-- Product 1 -->
+  <div class="product">
+    <h3>Product Type 1</h3>
+    <p>Short description of product type 1.</p>
+
+    <!-- Place the form here -->
     <form onsubmit="forwardDetails(event, 'plans/product1.pdf')">
-    <input type="text" name="contact" placeholder="Contact No" required>
-    <input type="email" name="email" placeholder="Email ID" required>
-    <input type="text" name="location" placeholder="Location" required>
-    <button type="submit">Send & Download</button>
-  </form>
-      </div>
-      <div class="card">
-        <h3>Product Type 2</h3>
-        <p>Short description of product type 2.</p>
-         < form onsubmit="forwardDetails(event, 'plans/product2.pdf')">
-    <input type="text" name="contact" placeholder="Contact No" required>
-    <input type="email" name="email" placeholder="Email ID" required>
-    <input type="text" name="location" placeholder="Location" required>
-    <button type="submit">Send & Download</button>
-  </form>
-      </div>
-      <div class="card">
-        <h3>Product Type 3</h3>
-        <p>Short description of product type 3.</p>
-        <form onsubmit="forwardDetails(event, 'plans/product3.pdf')">
-    <input type="text" name="contact" placeholder="Contact No" required>
-    <input type="email" name="email" placeholder="Email ID" required>
-    <input type="text" name="location" placeholder="Location" required>
-    <button type="submit">Send & Download</button></form>
-      </div>
-    </div>
+      <input type="text" name="contact" placeholder="Contact No" required>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="text" name="location" placeholder="Location" required>
+      <button type="submit">Send & Download</button>
+    </form>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product">
+    <h3>Product Type 2</h3>
+    <p>Short description of product type 2.</p>
+
+    <form onsubmit="forwardDetails(event, 'plans/product2.pdf')">
+      <input type="text" name="contact" placeholder="Contact No" required>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="text" name="location" placeholder="Location" required>
+      <button type="submit">Send & Download</button>
+    </form>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product">
+    <h3>Product Type 3</h3>
+    <p>Short description of product type 3.</p>
+
+    <form onsubmit="forwardDetails(event, 'plans/product3.pdf')">
+      <input type="text" name="contact" placeholder="Contact No" required>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="text" name="location" placeholder="Location" required>
+      <button type="submit">Send & Download</button>
+    </form>
+  </div>
+           </div>
   </section>
 
   <!-- Blog Section -->
