@@ -104,6 +104,24 @@ nav a:hover {
     .card h3 {
       margin-top: 0;
     }
+    /* Container for all product cards */
+.product-container {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 20px; 
+  justify-items: center;   /* Center each card */
+}
+
+/* Individual product card */
+.product {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  width: 100%;             /* Card fills its grid cell */
+  max-width: 350px;        /* Prevent cards from stretching too wide */
+}
     .blog-post {
   width: 900px;         
  margin: 0 auto 20px;  /* center align and add spacing */
