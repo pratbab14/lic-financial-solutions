@@ -304,29 +304,53 @@ nav a:hover {
     <h2> Products</h2>
     <div class="card-container">
       <div class="card">
-        <!-- Product 1 -->
- <div class="product">
-  <h3>Product Type 1</h3>
-  <p>Short description of product type 1.</p>
+ <!-- Product 1 -->
+  <div class="product">
+    <h3>Product Type 1</h3>
+    <p>Short description of product type 1.</p>
 
-  <!-- Form -->
-  <form onsubmit="return sendDetails(this, 'plans/product1.pdf')">
-    <input type="text" name="contact" placeholder="Contact No" required>
-    <input type="email" name="email" placeholder="Email ID" required>
-    <input type="text" name="location" placeholder="Location" required>
-    <button type="submit">Send</button>
-  </form>
+    <form onsubmit="return sendDetails(this, 'download1')">
+      <input type="text" name="contact" placeholder="Contact No" required>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="text" name="location" placeholder="Location" required>
+      <button type="submit" class="send-btn">Send</button>
+    </form>
 
-  <!-- Hidden download button (appears after sending) -->
-  <button id="download1" style="display:none;" onclick="downloadPDF('plans/product1.pdf')">
-    📄 Download Plan
-  </button>
-</div>
-</div>
+    <button id="download1" class="download-btn" style="display:none;" 
+            onclick="downloadPDF('plans/product1.pdf')">📄 Download Plan</button>
+  </div>
+
   <!-- Product 2 -->
-  
+  <div class="product">
+    <h3>Product Type 2</h3>
+    <p>Short description of product type 2.</p>
+
+    <form onsubmit="return sendDetails(this, 'download2')">
+      <input type="text" name="contact" placeholder="Contact No" required>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="text" name="location" placeholder="Location" required>
+      <button type="submit" class="send-btn">Send</button>
+    </form>
+
+    <button id="download2" class="download-btn" style="display:none;" 
+            onclick="downloadPDF('plans/product2.pdf')">📄 Download Plan</button>
+  </div>
 
   <!-- Product 3 -->
+  <div class="product">
+    <h3>Product Type 3</h3>
+    <p>Short description of product type 3.</p>
+
+    <form onsubmit="return sendDetails(this, 'download3')">
+      <input type="text" name="contact" placeholder="Contact No" required>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="text" name="location" placeholder="Location" required>
+      <button type="submit" class="send-btn">Send</button>
+    </form>
+
+    <button id="download3" class="download-btn" style="display:none;" 
+            onclick="downloadPDF('plans/product3.pdf')">📄 Download Plan</button>
+  </div>
   
   </div>
   </section>
@@ -450,28 +474,30 @@ nav a:hover {
 function toggleMenu() {
   document.getElementById("nav-menu").classList.toggle("active");
 }
-<script>
-function sendDetails(form, pdfUrl) {
-  if (form.checkValidity()) {
-    const contact = form.contact.value;
-    const email = form.email.value;
-    const location = form.location.value;
-
-    // WhatsApp message
-    const message = `New PDF Request:%0AContact: ${contact}%0AEmail: ${email}%0ALocation: ${location}`;
-    const whatsappUrl = `https://wa.me/918487090212?text=${message}`;
-    window.open(whatsappUrl, '_blank');
-
-    // Show the download button after sending
-    document.getElementById('download1').style.display = 'inline-block';
-    return false; // prevent actual form submission
-  }
-  return false;
-}
-
-function downloadPDF(pdfUrl) {
-  window.open(pdfUrl, '_blank');
-}
 </script>
-</body>
-</html>
+}
+  <script>
+    function sendDetails(form, downloadBtnId) {
+      if (form.checkValidity()) {
+        const contact = form.contact.value;
+        const email = form.email.value;
+        const location = form.location.value;
+
+        // Build WhatsApp message
+        const message = `New PDF Request:\nContact: ${contact}\nEmail: ${email}\nLocation: ${location}`;
+        const whatsappUrl = `https://wa.me/918487090212?text=${encodeURIComponent(message)}`;
+
+        // Open WhatsApp with pre-filled message
+        window.open(whatsappUrl, '_blank');
+
+        // Reveal the download button
+        document.getElementById(downloadBtnId).style.display = 'inline-block';
+        return false; // prevent actual form submission
+      }
+      return false;
+    }
+
+    function downloadPDF(pdfUrl) {
+      window.open(pdfUrl, '_blank');
+    }
+  </script>
