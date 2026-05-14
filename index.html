@@ -470,18 +470,29 @@ Professional guidance, personalized financial solutions, and trusted support.
 </div>
 
 <div class="product-container">
+<!-- PRODUCTS -->
 
-<!-- Product 1 -->
+<section id="products">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Life Insurance Plans</h2>
+</div>
+
+<div class="product-container">
+
+<!-- TERM PLAN -->
 
 <div class="product">
 
-<h3>Life Insurance Plans</h3>
+<h3>Term Insurance Plan</h3>
 
 <p>
-Secure your family with comprehensive life insurance protection.
+Affordable protection plan providing high life coverage and financial security for your family.
 </p>
 
-<form onsubmit="return sendDetails(this,'download1')">
+<form onsubmit="return sendDetails(this,'download-term')">
 
 <input type="text" name="name" placeholder="Name" required>
 
@@ -495,8 +506,8 @@ Secure your family with comprehensive life insurance protection.
 
 </form>
 
-<button id="download1" class="download-btn" style="display:none;"
-onclick="downloadPDF('Plans/product1.pdf')">
+<button id="download-term" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/term-insurance.pdf')">
 
 📄 Download Plan
 
@@ -504,17 +515,17 @@ onclick="downloadPDF('Plans/product1.pdf')">
 
 </div>
 
-<!-- Product 2 -->
+<!-- ENDOWMENT PLAN -->
 
 <div class="product">
 
-<h3>General Insurance</h3>
+<h3>Endowment Plan</h3>
 
 <p>
-Protect health, vehicle, property, and business assets.
+Combination of savings and insurance offering guaranteed returns with life protection.
 </p>
 
-<form onsubmit="return sendDetails(this,'download2')">
+<form onsubmit="return sendDetails(this,'download-endowment')">
 
 <input type="text" name="name" placeholder="Name" required>
 
@@ -528,8 +539,8 @@ Protect health, vehicle, property, and business assets.
 
 </form>
 
-<button id="download2" class="download-btn" style="display:none;"
-onclick="downloadPDF('plans/product2.pdf')">
+<button id="download-endowment" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/endowment-plan.pdf')">
 
 📄 Download Plan
 
@@ -537,17 +548,17 @@ onclick="downloadPDF('plans/product2.pdf')">
 
 </div>
 
-<!-- Product 3 -->
+<!-- MONEY BACK PLAN -->
 
 <div class="product">
 
-<h3>Savings & Investments</h3>
+<h3>Money Back Plan</h3>
 
 <p>
-Smart financial planning and investment opportunities.
+Get periodic returns during the policy term along with insurance protection benefits.
 </p>
 
-<form onsubmit="return sendDetails(this,'download3')">
+<form onsubmit="return sendDetails(this,'download-moneyback')">
 
 <input type="text" name="name" placeholder="Name" required>
 
@@ -561,8 +572,107 @@ Smart financial planning and investment opportunities.
 
 </form>
 
-<button id="download3" class="download-btn" style="display:none;"
-onclick="downloadPDF('plans/product3.pdf')">
+<button id="download-moneyback" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/money-back.pdf')">
+
+📄 Download Plan
+
+</button>
+
+</div>
+
+<!-- CHILD PLAN -->
+
+<div class="product">
+
+<h3>Child Education Plan</h3>
+
+<p>
+Secure your child’s future education and important milestones with long-term savings.
+</p>
+
+<form onsubmit="return sendDetails(this,'download-child')">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="text" name="contact" placeholder="Contact Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<button type="submit" class="send-btn">Send</button>
+
+</form>
+
+<button id="download-child" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/child-plan.pdf')">
+
+📄 Download Plan
+
+</button>
+
+</div>
+
+<!-- RETIREMENT PLAN -->
+
+<div class="product">
+
+<h3>Retirement / Pension Plan</h3>
+
+<p>
+Build a financially independent retirement with guaranteed pension and savings benefits.
+</p>
+
+<form onsubmit="return sendDetails(this,'download-retirement')">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="text" name="contact" placeholder="Contact Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<button type="submit" class="send-btn">Send</button>
+
+</form>
+
+<button id="download-retirement" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/retirement-plan.pdf')">
+
+📄 Download Plan
+
+</button>
+
+</div>
+
+<!-- ULIP PLAN -->
+
+<div class="product">
+
+<h3>ULIP Plan</h3>
+
+<p>
+Market-linked investment plan with life insurance benefits and wealth creation opportunities.
+</p>
+
+<form onsubmit="return sendDetails(this,'download-ulip')">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="text" name="contact" placeholder="Contact Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<button type="submit" class="send-btn">Send</button>
+
+</form>
+
+<button id="download-ulip" class="download-btn" style="display:none;"
+onclick="downloadPDF('plans/ulip-plan.pdf')">
 
 📄 Download Plan
 
@@ -575,7 +685,6 @@ onclick="downloadPDF('plans/product3.pdf')">
 </div>
 
 </section>
-
 <!-- BLOG -->
 
 <section id="blog">
