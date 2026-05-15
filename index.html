@@ -877,14 +877,19 @@ function toggleMenu(){
   document.getElementById("nav-menu").classList.toggle("active");
 }
 
-function sendDetails(form, downloadBtnId){
+function sendDetails(form, downloadBtnId, planName){
 
-  const contact = form.contact.value;
-  const email = form.email.value;
-  const location = form.location.value;
+  const name = form.querySelector('input[name="name"]').value;
+  const contact = form.querySelector('input[name="contact"]').value;
+  const email = form.querySelector('input[name="email"]').value;
+  const location = form.querySelector('input[name="location"]').value;
 
   const message =
-`New Plan Request:
+`New Plan Inquiry:
+
+Interested Plan: ${planName}
+
+Name: ${name}
 Contact: ${contact}
 Email: ${email}
 Location: ${location}`;
