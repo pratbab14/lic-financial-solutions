@@ -567,30 +567,15 @@ color:white;">
 </p>
 <form onsubmit="return sendDetails(this,'download-term','Whole Life Plan')">
 
-<form 
-action="https://formsubmit.co/pratyushauto@gmail.com" 
-method="POST"
-onsubmit="return sendWhatsApp(this, 'Whole Life Plan')"
->
+<input type="text" name="name" placeholder="Name" required>
 
-  <input type="text" name="Name" placeholder="Your Name" required>
+<input type="text" name="contact" placeholder="Contact Number" required>
 
-  <input type="tel" name="Contact" placeholder="Mobile Number" required>
+<input type="email" name="email" placeholder="Email Address" required>
 
-  <input type="email" name="Email" placeholder="Email Address" required>
+<input type="text" name="location" placeholder="Location" required>
 
-  <input type="text" name="Location" placeholder="Location" required>
-
-  <!-- Hidden Plan Name -->
-  <input type="hidden" name="Interested Plan" value="LIC Jeevan Anand">
-
-  <!-- Disable Captcha -->
-  <input type="hidden" name="_captcha" value="false">
-
-  <!-- Optional Success Page -->
-  <input type="hidden" name="_next" value="https://pratbab14.github.io/EliteCover-Consultants/">
-
-  <button type="submit">Submit</button>
+<button type="submit" class="send-btn">Send</button>
 
 </form>
 
@@ -918,12 +903,16 @@ Ghuma, Ahmedabad, Gujarat - 380058
 
 <script>
 
-function sendWhatsApp(form, planName){
+function toggleMenu(){
+  document.getElementById("nav-menu").classList.toggle("active");
+}
 
-  const name = form.querySelector('input[name="Name"]').value;
-  const contact = form.querySelector('input[name="Contact"]').value;
-  const email = form.querySelector('input[name="Email"]').value;
-  const location = form.querySelector('input[name="Location"]').value;
+function sendDetails(form, downloadBtnId, planName){
+
+  const name = form.querySelector('input[name="name"]').value;
+  const contact = form.querySelector('input[name="contact"]').value;
+  const email = form.querySelector('input[name="email"]').value;
+  const location = form.querySelector('input[name="location"]').value;
 
   const message =
 `New Plan Inquiry:
@@ -940,7 +929,13 @@ Location: ${location}`;
 
   window.open(whatsappUrl, '_blank');
 
-  return true; // allows formsubmit email send
+  document.getElementById(downloadBtnId).style.display='block';
+
+  return false;
+}
+
+function downloadPDF(pdfUrl){
+  window.open(pdfUrl,'_blank');
 }
 
 </script>
